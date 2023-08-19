@@ -14,6 +14,3 @@ apt-get update
 apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 usermod -aG docker ubuntu
 
-# install ansible
-# apt-get -y install python3-pip
-# python3 -m pip install ansible

@@ -1,0 +1,12 @@
+#! /bin/bash
+# make sure to add docker creds, and ssh key in jenkins creds with the correct env variavles name before running this script
+
+docker login -u $docker_username -p $docker_password
+cd flask-webapp
+docker build . -t anas1243/simple-webapp-flask:${BUILD_ID}
+docker push anas1243/simple-webapp-flask:${BUILD_ID}
+cd ../ansible
+aws --region eu-central-1 ec2 describe-instances --filters "Name=tag:Name,Values=jenkins_flask_webapp" \
+--query 'Reservations[*].Instances[*].[PublicIpAddress]' \
+--output text >> inventory
+ansible-playbook site.yaml

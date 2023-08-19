@@ -4,8 +4,8 @@ provider "aws" {
 
 module "network" {
   source              = "github.com/anas1243/public-network-terraform-module.git"
-  use_case            = var.use_case
-  region              = var.region
+  use_case            = "${var.use_case}"
+  region              = "${var.region}"
   public_subnet1_zone = "${var.region}a"
   public_subnet2_zone = "${var.region}b"
   vpc_cidr            = "10.0.0.0/16"
