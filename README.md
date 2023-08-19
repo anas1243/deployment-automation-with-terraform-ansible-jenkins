@@ -5,6 +5,12 @@ Deploy a Dockerized simple flask app on an AWS EC2 using Docker, Terraform, Ansi
 ## Technology
 ![Docker](images/icons8-docker-48.png) ![Python](images/icons8-python-48.png) ![Flask](images/icons8-flask-50.png) ![Terraform](images/icons8-terraform-48.png) ![Ansible](images/icons8-ansible-48.png) ![Jenkins](images/icons8-jenkins-48.png)
 
+
+## Project Diagram
+
+![Project Design](images/Diagram.png)
+
+
 ## Description
 
 This project aimed to integrate my knowledge of Docker, Terraform, Ansible, and Jenkins in one simple project.
